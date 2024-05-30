@@ -1,0 +1,49 @@
+@TodoAi_HostAddress = http://localhost:5104
+
+GET {{TodoAi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+GET {{TodoAi_HostAddress}}/api/TodoItems
+Accept: application/json
+
+###
+POST {{TodoAi_HostAddress}}/apiTest/Test
+Content-Type: application/json; charset=UTF-8
+
+{
+  "Name":"c# projects",
+  "IsComplete":false  
+}
+###
+POST {{TodoAi_HostAddress}}/apiTest/Test
+Content-Type: application/json; charset=UTF-8
+
+{
+  "Name":"ai projects",
+  "IsComplete":false  
+}
+###
+POST {{TodoAi_HostAddress}}/apiTest/Test
+Content-Type: application/json; charset=UTF-8
+
+{
+  "Name":"typing projects",
+  "IsComplete":false  
+}
+
+###
+get {{TodoAi_HostAddress}}/apiTest/Test
+
+###
+Put {{TodoAi_HostAddress}}/apiTest/Test/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "c# projects",
+  "isComplete": true
+}
+
+###
+DELETE {{TodoAi_HostAddress}}/apiTest/Test/3
